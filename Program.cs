@@ -16,7 +16,7 @@ void Print(string[] array)
 {
 for (int q = 0; q < array.Length; q++)
 {
-Console.Write($"{aray[q]} ");
+Console.Write($"{array[q]} ");
 }
 Console.WriteLine();
 }
