@@ -1,24 +1,37 @@
-﻿string[] firstArray = new string[3] {"-2", "Denmark", "123"};
-string[] secondArray = new string[firstArray.Length];
-void Function(string[] firstArray, string[] secondArray)
+﻿Console.WriteLine("Впишите элементы массива разделяя их пробелом: ");
+string[] firstArray = Console.ReadLine().Split(" ");
+int Less = 0;
+void Function (string[] firstArray)
 {
-    int score = 0;
     for (int q = 0; q < firstArray.Length; q++)
     {
-    if(firstArray[q].Length <= 3)
+        if(firstArray[q].Length <= 3)
         {
-        secondArray[score] = firstArray[q];
-        score++;
+            Less++;
         }
     }
 }
-void Print(string[] array)
+void Function2 (string [] ArrayQ)
 {
-for (int q = 0; q < array.Length; q++)
+    int ct = 0;
+    for (int q = 0; q < firstArray.Length; q++)
+    {
+        if (firstArray[q].Length <= 3)
+        {
+            ArrayQ[ct] = firstArray[q];
+            ct++;
+        }
+    }
+}
+void PrintArray (string [] ArrayW)
 {
-Console.Write($"{array[q]} ");
+    for (int q = 0; q < ArrayW.Length; q++)
+    {
+        if (q==ArrayW.Length-1) Console.Write($"{ArrayW[q]}");
+        else Console.Write($"{ArrayW[q]}, ");
+    }
 }
-Console.WriteLine();
-}
-Function(firstArray, secondArray);
-Print(secondArray);
+Function(firstArray);
+string [] EndArray = new string [Less];
+Function2(EndArray);
+PrintArray(EndArray);
