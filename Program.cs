@@ -12,3 +12,13 @@ void Function(string[] firstArray, string[] secondArray)
         }
     }
 }
+void Print(string[] array)
+{
+for (int q = 0; q < array.Length; q++)
+{
+Console.Write($"{aray[q]} ");
+}
+Console.WriteLine();
+}
+Function(firstArray, secondArray);
+Print(secondArray);
